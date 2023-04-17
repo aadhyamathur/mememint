@@ -3,6 +3,7 @@ import "./App.css";
 import * as fcl from "@onflow/fcl";
 import * as types from "@onflow/types";
 import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
 /* import the ipfs-http-client and buffer libraries */
 import { create } from "ipfs-http-client";
 import { Buffer } from "buffer";
@@ -47,6 +48,7 @@ function App() {
   };
   return (
     <div className="App font-lato">
+      <Navbar />
       {user && user.addr ? <h1>{user.addr}</h1> : null}
 
       <h1 className="text-yellow-600 text-2xl"> Hi MemeMint </h1>
