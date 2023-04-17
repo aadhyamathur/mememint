@@ -46,7 +46,7 @@ function App() {
     console.log(hash);
   };
   return (
-    <div className="App">
+    <div className="App font-lato">
       {user && user.addr ? <h1>{user.addr}</h1> : null}
 
       <h1 className="text-yellow-600 text-2xl"> Hi MemeMint </h1>
