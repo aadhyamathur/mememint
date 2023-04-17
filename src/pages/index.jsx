@@ -10,9 +10,10 @@ function index() {
           <img src="./speaker.svg" alt="speaker" className="h-7 mx-2" />
         </h3>
         <h1 className="text-[45px] font-bold text-center">
-          Add <span className="text-main">engagement </span>
-          to your content <br /> with on-chain
-          <span className="text-main"> Comments</span>
+          Get<span className="text-main"> ownership </span>
+          for your <br />
+          <span className="text-main"> creativity</span> and{" "}
+          <span className="text-main"> imagination</span>
         </h1>
         <h2 className=" text-[18px]  mx-auto text-center my-4">
           Easy to integrate comments section{" "}
