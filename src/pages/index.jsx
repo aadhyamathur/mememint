@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Route } from "wouter";
 
 function index() {
   return (
@@ -20,12 +21,13 @@ function index() {
           <br /> Allow your users to utilize a user-owned social graph and
           engage with your content.
         </h2>
-        <a href={"/register"}>
+        <Link href={"/templates"}>
           <button className="m-6 mt-15 bg-main text-[#FEFFFE] border-0 px-5 py-3 rounded-md flex items-center mx-auto">
-            <img src="./chat.svg" alt="comments" className="mx-1 h-5" /> Add
-            Buzz to your site
+            {/* <img src="./chat.svg" alt="comments" className="mx-1 h-5" /> */}
+            <span className="font-black text-2xl mx-2">+</span>
+            Create Meme
           </button>
-        </a>
+        </Link>
       </div>
 
       <img
