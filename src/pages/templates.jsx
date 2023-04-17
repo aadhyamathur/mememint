@@ -28,6 +28,10 @@ function Templates() {
           <h1>loading</h1>
         ) : (
           <div className="grid grid-cols-3 place-items-center">
+            <div className="w-[300px] h-[340px] bg-yellow-50 border border-main rounded-lg border-b-[2px] flex items-center justify-center font-semibold">
+              <p className="text-[40px] text-gray-700">+</p>
+              <h1 className="text-2xl text-gray-700">Upload your own file</h1>
+            </div>
             {memes?.map((meme) => (
               <MemeTemplate {...meme} key={meme.id} />
             ))}
