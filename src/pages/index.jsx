@@ -6,7 +6,7 @@ function index() {
     <>
       <div className="mt-[40px] sm:mt-[100px] justify-center items-center  flex-col">
         <h3 className="justify-center items-center flex text-xl my-3 ">
-          Give your audience a voice{" "}
+          Create and Mint memes
           <img src="./speaker.svg" alt="speaker" className="h-7 mx-2" />
         </h3>
         <h1 className="text-[45px] font-bold text-center">
@@ -16,11 +16,10 @@ function index() {
           <span className="text-main"> imagination</span>
         </h1>
         <h2 className=" text-[18px]  mx-auto text-center my-4">
-          Easy to integrate comments section{" "}
-          <span className="text-main text-semibold">built on Lens</span>{" "}
+          {/* <span className="text-main text-semibold">built on Lens</span>{" "}
           Decentralized social graph.
           <br /> Allow your users to utilize a user-owned social graph and
-          engage with your content.
+          engage with your content. */}
         </h2>
         <Link href={"/templates"}>
           <button className="m-6 mt-15 bg-main text-[#FEFFFE] border-0 px-5 py-3 rounded-md flex items-center mx-auto">
@@ -31,7 +30,7 @@ function index() {
         </Link>
       </div>
 
-      <img
+      {/* <img
         src="./demo1.png"
         alt="demo"
         className="w-[90vw] sm:w-[50%] rounded-lg  border-2 border-dashed mx-auto border-main my-20 mb-30"
@@ -41,7 +40,7 @@ function index() {
           <img src="./lens.svg" alt="lens" className="mx-3" />
           Built on Lens Protocol{" "}
         </div>
-      </a>
+      </a> */}
     </>
   );
 }

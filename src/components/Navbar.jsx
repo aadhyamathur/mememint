@@ -7,7 +7,7 @@ function Nav() {
       <Link href={"/"}>
         <div className="flex mx-2  relative justify-center items-center h-full">
           {/* <img src="./logo.svg" alt="Buzz" /> */}
-          <span>😎</span>
+          <span className="text-2xl">😎</span>
           <h1 className="text-[#202021] text-2xl font-semibold pb-2 ">
             MemeMaker
           </h1>
@@ -17,11 +17,7 @@ function Nav() {
         </div>
       </Link>
       <div className="flex items-center">
-        <Link href={"/docs"}>
-          <h2 className="mx-3">Docs</h2>
-        </Link>
-        <h2 className="mx-3">SDK</h2>
-        <Link href={"/register"}>
+        <Link href={"/templates"}>
           <button className="hidden sm:flex m-5 bg-main text-[#FEFFFE] border-0 px-3 py-2 rounded-md  items-center">
             <span className="font-black text-2xl mx-2">+</span> Create meme
           </button>
