@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react';
 /* import the ipfs-http-client and buffer libraries */
 import { create } from 'ipfs-http-client'
 import { Buffer } from 'buffer'
+import { mintNFTTx, viewNFTScript } from "./cadence/code.js";
 
 const projectId = "2Jg0M9eybJ1dltguJTWfhnooRsr"
 const projectSecret = "0f4dbad34e18bf3c4cff4920302c71b7"
@@ -43,8 +44,20 @@ function App() {
   const mint = async () => {
     const added = await client.add(file);
     const hash = added.path;
+    const transactionId = await fcl.send([
+      fcl.transaction(mintNFTTx),
+      fcl.args([
+        fcl.arg(hash, types.String),
+        fcl.arg("Holiday NFT", types.String)
+      ]),
+      fcl.payer(fcl.authz),
+      fcl.proposer(fcl.authz),
+      fcl.authorizations([fcl.authz]),
+      fcl.limit(9999)
+    ]).then(fcl.decode);
 
     console.log(hash);
+    console.log(transactionId);
   }
   return (
     <div className="App">
