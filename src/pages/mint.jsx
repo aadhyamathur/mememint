@@ -8,8 +8,8 @@ import { create } from "ipfs-http-client";
 import { Buffer } from "buffer";
 import { Link, Route } from "wouter";
 
-const projectId = "2Jg0M9eybJ1dltguJTWfhnooRsr";
-const projectSecret = "0f4dbad34e18bf3c4cff4920302c71b7";
+const projectId = process.env.REACT_APP_IPFS_PROJECT_ID;
+const projectSecret = process.env.REACT_APP_IPFS_SECRET;
 const auth =
   "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
 
