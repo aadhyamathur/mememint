@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Templates from "./pages/templates";
 import Mint from "./pages/mint";
 import Home from "./pages/index";
+import Meme from "./pages/meme/id";
 /* import the ipfs-http-client and buffer libraries */
 import { create } from "ipfs-http-client";
 import { Buffer } from "buffer";
@@ -22,6 +23,9 @@ function App() {
       </Route>
       <Route path="/mint">
         <Mint />
+      </Route>
+      <Route path="/meme/:id">
+        <Meme />
       </Route>
       <Route path="/">
         <Home />
