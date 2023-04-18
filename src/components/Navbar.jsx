@@ -1,7 +1,13 @@
 import React from "react";
 import { Link, Route } from "wouter";
 
-function Nav() {
+function Nav(props) {
+  const logIn = () => {
+    props.fcl?.authenticate();
+  };
+  const logOut = () => {
+    props.fcl?.unauthenticate();
+  };
   return (
     <div className="top-0 flex border-0 border-b-[1px] border-[#E4E7EB] justify-around h-[80px]">
       <Link href={"/"}>
@@ -21,7 +27,9 @@ function Nav() {
           <button className="hidden sm:flex m-5 bg-main text-[#FEFFFE] border-0 px-3 py-2 rounded-md  items-center">
             <span className="font-black text-2xl mx-2">+</span> Create meme
           </button>
-        </Link>
+         </Link>
+     {/*  { props.addr && <button onClick={()=>logIn()}>Login</button> }
+      {props.addr ? props.addr : <button onClick={()=>logOut()}>Logout</button>} */}
       </div>
     </div>
   );
